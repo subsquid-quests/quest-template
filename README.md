@@ -17,8 +17,7 @@ This is template repository for quests.
 # Deploy a template squid on ETH
 
 Deploy a simple squid using Subsquid Cloud Services
-
-#### $\textcolor{red}{\textsf{Color didint work .}}$
+$\textcolor{red}{\textsf{Color didint work .}}$
 
 # Quest Info
 
