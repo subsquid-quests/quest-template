@@ -12,11 +12,11 @@
 
 # Subsquid Quest Template
 
-This is template repository for quests.
+This folder contains a starter EVM indexing template.
 
 # Deploy a template squid on ETH
 
-Deploy a simple squid using Subsquid Cloud Services
+Using Subsquid Cloud Services, deploy the squid this folder.
 
 # Quest Info
 
@@ -26,7 +26,7 @@ Deploy a simple squid using Subsquid Cloud Services
 
 # Acceptance critera
 
-Github Repository describing the squid and API link.
+Provide Github Repository describing the squid and an API link from the aquarium.
 
 # Useful links
 
