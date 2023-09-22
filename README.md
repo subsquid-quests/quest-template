@@ -20,14 +20,7 @@ Deploy a simple squid using Subsquid Cloud Services
 
 # Schema
 
-```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-```
-
+<span style="color: red;">This is red text.</span>
 Bin Format Contracts Dataset
 
 | Category         | Skill Level      | Time required (hours) | Max Participants | Reward | Status |
