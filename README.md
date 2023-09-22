@@ -20,9 +20,9 @@ Deploy a simple squid using Subsquid Cloud Services
 
 # Quest Info
 
-| Category         | Skill Level                          | Time required (hours) | Max Participants | Reward | Status |
-| ---------------- | ------------------------------------ | --------------------- | ---------------- | ------ | ------ |
-| Squid Deployment | $\textcolor{green}{\textsf{Simple}}$ | ~2                    | ~ 1              | 50tSQD | open   |
+| Category         | Skill Level                          | Time required (hours) | Max Participants | Reward                             | Status |
+| ---------------- | ------------------------------------ | --------------------- | ---------------- | ---------------------------------- | ------ |
+| Squid Deployment | $\textcolor{green}{\textsf{Simple}}$ | ~2                    | 1                | $\textcolor{red}{\textsf{50tSQD}}$ | open   |
 
 # Acceptance critera
 
