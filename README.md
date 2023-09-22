@@ -18,14 +18,13 @@ This is template repository for quests.
 
 Deploy a simple squid using Subsquid Cloud Services
 
-# Schema
+#### $\textcolor{red}{\textsf{Color didint work .}}$
 
-<span style="color: red;">This is red text.</span>
-Bin Format Contracts Dataset
+# Quest Info
 
-| Category         | Skill Level      | Time required (hours) | Max Participants | Reward | Status |
-| ---------------- | ---------------- | --------------------- | ---------------- | ------ | ------ |
-| Squid Deployment | `diff + Simple ` | ~2                    | ~ 1              | 50tSQD | open   |
+| Category         | Skill Level            | Time required (hours) | Max Participants | Reward | Status |
+| ---------------- | ---------------------- | --------------------- | ---------------- | ------ | ------ |
+| Squid Deployment | `diff``` + Simple ```` | ~2                    | ~ 1              | 50tSQD | open   |
 
 # Acceptance critera
 
