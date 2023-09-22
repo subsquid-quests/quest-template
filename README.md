@@ -17,13 +17,12 @@ This is template repository for quests.
 # Deploy a template squid on ETH
 
 Deploy a simple squid using Subsquid Cloud Services
-$\textcolor{red}{\textsf{Color didint work .}}$
 
 # Quest Info
 
-| Category         | Skill Level            | Time required (hours) | Max Participants | Reward | Status |
-| ---------------- | ---------------------- | --------------------- | ---------------- | ------ | ------ |
-| Squid Deployment | `diff``` + Simple ```` | ~2                    | ~ 1              | 50tSQD | open   |
+| Category         | Skill Level                          | Time required (hours) | Max Participants | Reward | Status |
+| ---------------- | ------------------------------------ | --------------------- | ---------------- | ------ | ------ |
+| Squid Deployment | $\textcolor{green}{\textsf{Simple}}$ | ~2                    | ~ 1              | 50tSQD | open   |
 
 # Acceptance critera
 
