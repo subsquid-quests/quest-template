@@ -20,11 +20,19 @@ Deploy a simple squid using Subsquid Cloud Services
 
 # Schema
 
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
+
 Bin Format Contracts Dataset
 
-| Category         | Skill Level               | Time required (hours) | Max Participants | Reward | Status |
-| ---------------- | ------------------------- | --------------------- | ---------------- | ------ | ------ |
-| Squid Deployment | $${\color{Simple}Green}$$ | ~2                    | ~ 1              | 50tSQD | open   |
+| Category         | Skill Level      | Time required (hours) | Max Participants | Reward | Status |
+| ---------------- | ---------------- | --------------------- | ---------------- | ------ | ------ |
+| Squid Deployment | `diff + Simple ` | ~2                    | ~ 1              | 50tSQD | open   |
 
 # Acceptance critera
 
