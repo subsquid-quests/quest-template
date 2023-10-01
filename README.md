@@ -30,4 +30,4 @@ Provide Github Repository describing the squid and an API link from the aquarium
 
 # Useful links
 
-- [https://docs.subsquid.io/deploy-squid/quickstart/](Quickstart)
+- [Quickstart](https://docs.subsquid.io/deploy-squid/quickstart/)
