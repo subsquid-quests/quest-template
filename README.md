@@ -185,7 +185,7 @@ ctx.store.upsert([...transfers.values()]);
 ```
 3. Verify log addresses, not only topics.
 ```bash
- if (log.topics[0] === erc721.events.Transfer.topic && log.address = CONTRACT_ADDRESS) {
+ if (log.topics[0] === erc721.events.Transfer.topic && log.address === CONTRACT_ADDRESS) {
 ...
 }
 ```
