@@ -167,3 +167,25 @@ will pause new requests for 20000ms {"rpcUrl":"https://rpc.ankr.com/eth",
 "reason" : "HttpError: got 429 from https://rpc.ankr.com/eth"}
 ```
    If necessary, [rate limit your RPC queries](https://docs.subsquid.io/evm-indexing/configuration/initialization/#set-data-source).
+
+## Best practices:
+
+1. Batch saving
+```bash
+let transfers: Transfers[] = [];
+...
+ctx.store.save(transfers);
+```
+
+2. Using map instead of array to avoid duplicate values
+```bash
+let transfers: Map<string, Transfer> = new Map();
+...
+ctx.store.upsert([...transfers.values()]);
+```
+3. Verify log addresses, not only topics.
+```bash
+ if (log.topics[0] === erc721.events.Transfer.topic && log.address = CONTRACT_ADDRESS) {
+...
+}
+```
