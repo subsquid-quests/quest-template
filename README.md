@@ -30,6 +30,8 @@ Some of the reasons why the solution will not be accepted include:
 - [batch handler filters](https://docs.subsquid.io/evm-indexing/configuration/caveats/) are not set up correctly (leads to a late sync failure in [RPC-ingesting](https://docs.subsquid.io/evm-indexing/evm-processor/#rpc-ingestion) squids)
 - data returned for any query is not consistent with subgraph data
 
+You may find [this tool](https://github.com/abernatskiy/compareGraphQL) to be useful for squid to subgraph API comparisons.
+
 It is desirable that your solution:
 - includes a suite of test GraphQL queries that touches every [schema entity](https://docs.subsquid.io/store/postgres/schema-file/entities/) and, if used, every [custom resolver](https://docs.subsquid.io/graphql-api/custom-resolvers/) at least once, with corresponding subgraph queries (listing in README is enough)
 - has high code quality (readability, simplicity, comments where necessary)
