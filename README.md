@@ -12,7 +12,7 @@
 
 # XXXXX Subgraph migration
 
-This quest is to migrate the [XXXXX subgraph](https://thegraph.com/explorer) to Squid SDK. The resulting squid should match the GraphQL API of the subgraph as close as possible, by migrating `schema.graphql`. The judges reserve the right to request improvements afther the initial review of the submission. Reach out to the [Discord Channel]( https://discord.com/channels/857105545135390731/1155812879770058783) for any tech questions regarding this quest. Use ```template``` squid as a starter.
+This quest is to migrate the [XXXXX subgraph](https://thegraph.com/explorer) to Squid SDK. The resulting squid should match the GraphQL API of the subgraph as close as possible, by migrating `schema.graphql`. The judges reserve the right to request improvements afther the initial review of the submission. Reach out to the [Discord Channel]( https://discord.com/channels/857105545135390731/1155812879770058783) for any tech questions regarding this quest. You can use the ```template``` squid as a starter.
 
 # Quest Info
 
@@ -20,22 +20,24 @@ This quest is to migrate the [XXXXX subgraph](https://thegraph.com/explorer) to 
 | ---------------- | ------------------------------------- | --------------------- | ---------------- | ------------------------------------- | ------ |
 | Squid Deployment | $\textcolor{orange}{\textsf{Medium}}$ | ~60                   | 5                | $\textcolor{red}{\textsf{3000tSQD}}$  | open   |
 
-# Acceptance critera
+# Acceptance criteria
 
 Ultimately, the solutions are accepted at the discretion of judges following a manual review. This sections is a rough guide that is in no way binding on our side.
 
 Some of the reasons why the solution will not be accepted include:
-- squid does not start
-- squid fails to sync fully due to internal errors
-- [batch handler filters](https://docs.subsquid.io/evm-indexing/configuration/caveats/) are not set up correctly (leads to a late sync failure in [RPC-ingesting](https://docs.subsquid.io/evm-indexing/evm-processor/#rpc-ingestion) squids)
-- data returned for any query is not consistent with subgraph data
 
-You may find [this tool](https://github.com/abernatskiy/compareGraphQL) to be useful for squid to subgraph API comparisons.
+- The submission is an unmodified squid template. We **will not** reward these by chance. Give up.
+- We receive two or more solutions with identical or almost identical code. If we detect that, either one or none of the affected submissions will be rewarded, depending on your luck.
+- The squid does not start.
+- The squid fails to sync fully due to internal errors.
+- The squid fails to sync fully in a reasonable time due to severe performance issues. Follow the [best practices guide](https://docs.subsquid.io/cloud/resources/best-practices/) to avoid these.
+- The squid writes no data into its database.
+- Data returned for any query is not consistent with subgraph data. You may find [this tool](https://github.com/abernatskiy/compareGraphQL) useful for comparing squid and subgraph APIs.
 
 It is desirable that your solution:
+
 - includes a suite of test GraphQL queries that touches every [schema entity](https://docs.subsquid.io/store/postgres/schema-file/entities/) and, if used, every [custom resolver](https://docs.subsquid.io/graphql-api/custom-resolvers/) at least once, with corresponding subgraph queries (listing in README is enough)
 - has high code quality (readability, simplicity, comments where necessary)
-- uses [batch processing](https://docs.subsquid.io/basics/batch-processing/) consistently
 - avoids any "sleeping bugs": logic errors that accidentally happen to not break the data
 - follows the standard squid startup procedure:
   ```
@@ -48,7 +50,7 @@ It is desirable that your solution:
   ```
   If it does not, describe your startup procedure in the README.
 
-Please test your solutions before submitting. We do allow some corrections, but judges' time is not limitless.
+**Please test your solutions before submitting.** We do allow some corrections, but judges' time is not limitless.
 
 To submit, invite the following github accounts to your private repo : [@dariaag](https://github.com/dariaag), [@belopash](https://github.com/belopash), [@abernatskiy](https://github.com/abernatskiy) and [@dzhelezov](https://github.com/dzhelezov).
 
@@ -60,11 +62,12 @@ Winners will be listed at the quest repository README. If you do not wish to be 
 
 # Useful links
 
-- [Quickstart](https://docs.subsquid.io/deploy-squid/quickstart/)
-- [TheGraph Migration guide](https://docs.subsquid.io/migrate/migrate-subgraph/)
-- [Cryptopunks Subgraph source code](https://github.com/itsjerryokolo/CryptoPunks)
+- [Squid development master guide](https://docs.subsquid.io/sdk/how-to-start/squid-development/)
+- [TheGraph migration guide](https://docs.subsquid.io/migrate/migrate-subgraph/)
+- [Subsquid Cloud best practices guide](https://docs.subsquid.io/cloud/resources/best-practices/) (includes a lot of good non-Cloud related advice)
+- [compareGraphQL tool](https://github.com/abernatskiy/compareGraphQL)
 
-# Setup and Common errors
+# Setup and common errors
 
 1. Install Node v16.x or newer [https://nodejs.org/en/download](https://nodejs.org/en/download)
 2. Install Docker [https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/)
@@ -75,7 +78,7 @@ Winners will be listed at the quest repository README. If you do not wish to be 
     npm i -g @subsquid/cli@latest
     ```
 
-## How to run a squid:
+## How to run a squid
 
 Full startup procedure for newly developed squids:
 
@@ -135,7 +138,7 @@ sqd process &
 sqd serve
 ```
 
-## Possible Errors:
+## Possible errors
 
 1. Docker not installed
 
@@ -170,7 +173,7 @@ will pause new requests for 20000ms {"rpcUrl":"https://rpc.ankr.com/eth",
 ```
    If necessary, [rate limit your RPC queries](https://docs.subsquid.io/evm-indexing/configuration/initialization/#set-data-source).
 
-## Best practices:
+## Best practices extras
 
 1. Batch saving
 ```bash
@@ -185,7 +188,8 @@ let transfers: Map<string, Transfer> = new Map();
 ...
 ctx.store.upsert([...transfers.values()]);
 ```
-3. Verify log addresses, not only topics.
+
+3. Verify both log addresses and topics before processing events.
 ```bash
  if (log.topics[0] === erc721.events.Transfer.topic && log.address === CONTRACT_ADDRESS) {
 ...
