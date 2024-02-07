@@ -130,7 +130,7 @@ sqd process
 sqd serve
 ```
 
-Types (`./src/abi`), models (`./src/model`) and migrations ('./db') are typically kept within squid repos after they become stable. Then the startup procedure simplifies to
+Types (`./src/abi`), models (`./src/model`) and migrations (`./db`) are typically kept within squid repos after they become stable. Then the startup procedure simplifies to
 ```bash
 npm ci
 sqd up
