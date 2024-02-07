@@ -22,6 +22,8 @@ This quest is to migrate the [XXXXX subgraph](https://thegraph.com/explorer) to 
 
 # Acceptance criteria
 
+## General
+
 Ultimately, the solutions are accepted at the discretion of judges following a manual review. This sections is a rough guide that is in no way binding on our side.
 
 Some of the reasons why the solution will not be accepted include:
@@ -53,6 +55,11 @@ It is desirable that your solution:
 **Please test your solutions before submitting.** We do allow some corrections, but judges' time is not limitless.
 
 To submit, invite the following github accounts to your private repo : [@dariaag](https://github.com/dariaag), [@belopash](https://github.com/belopash), [@abernatskiy](https://github.com/abernatskiy) and [@dzhelezov](https://github.com/dzhelezov).
+
+## Permissible deviations from the subgraph schema
+
+* You can use `String` in place of `Bytes` in your submissions
+* The only way to handle [many-to-many relations](https://docs.subsquid.io/sdk/reference/schema-file/entity-relations/#many-to-many-relations) in squids is by adding explicit join tables. Addition of such tables is an expected change when schemas with such relations are migrated.
 
 # Rewards
 
